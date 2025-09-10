@@ -4,7 +4,13 @@ class_name LightLevel
 #Configurable properties
 var max_light_level: int = 10
 var light_level: int = 5
-var light_colors: Array = ["white", "red", "blue", "green", "yellow"]
+var light_colors: Array = ["white", 
+	"red", 
+	"blue", 
+	"green", 
+	"yellow",
+	#Add New Element here if needed.
+	]
 
 #Visibilty
 var base_visible_cards: int = 1 #Minimum visible at level 1
