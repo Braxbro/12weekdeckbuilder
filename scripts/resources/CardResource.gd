@@ -11,12 +11,15 @@ class_name CardResource extends Resource
 @export_group("Card Effects")
 ## A list of effects that the card has.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 @export var effects: Array[CardEffectResource]
 
 ## Trigger the card's effects, targeting ally_target or enemy_target as applicable.
 func trigger_effects(ally_target, enemy_target):
 	pass
 =======
+=======
+>>>>>>> Stashed changes
 @export var effects: Array[EffectResource]
 
 ## Trigger the card's effects.
@@ -28,4 +31,7 @@ func play_effects():
 			(effect as TargetedEffectResource).invoke_effect(target_batch)
 		else:
 			effect.invoke_effect()
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
