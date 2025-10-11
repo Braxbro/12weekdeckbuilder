@@ -1,4 +1,3 @@
-@tool
 class_name TargetBehaviorResource extends Resource
 ## A data structure that controls common targeting behaviors.
 
@@ -24,7 +23,7 @@ const Flags = Globals.TargetFlags
 ## Targets randomly and does not present a choice to the player. Should be true when target_count, ally_count, or enemy_count are greater than 1.
 ## To avoid superfluous operations, is ignored when the number of targets matches or exceeds the number of eligible targets.
 @export var random_target: bool = true
-## Counts all targets towards the same limit. If target_self is true, its user will always be targeted when shared_count is false.
+## Counts all targets towards the same limit. If target_self is true, its user will always be targeted when shared_target is false.
 @export var shared_target: bool = true
 ## The number of targets to be targeted. Must be 1 or more. Use the maximum value when targeting all targets.
 @export_range(1, Globals.max_target_count, 1, "hide_slider") var target_count: int = 1
@@ -81,7 +80,7 @@ func get_enemy_target_count():
 		return enemy_count if enemy_count > 0 else target_count
 	return false
 	
-## A copy of the constructor that overrides the 
+## A setter to quickly set target mask using bit flags, instead of setting related booleans one by one.
 func set_target_flags(target_mask: int) -> void:
 	# Ignored, but will still warn to assist in streamlining code.
 	if target_mask >= 2**5: push_warning("TargetBehaviorResource assigned one or more useless target flags.")
