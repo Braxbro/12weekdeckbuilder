@@ -13,8 +13,7 @@ var locale_key: String = "EFFECT_DEBUG":
 	set(new_value):
 		pass
 
-@export var debug_string: String = "Debug Effect"
-
 ## Trigger the effect. Override this to change the effect.
 func invoke_effect() -> void:
-	print("An EffectResource has been invoked.")
+	## Warn because bare EffectResource should not be used on actual cards, but may be used for testing
+	push_warning("A debug EffectResource has been invoked.")

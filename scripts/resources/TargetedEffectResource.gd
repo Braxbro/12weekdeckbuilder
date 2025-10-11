@@ -5,4 +5,5 @@ class_name TargetedEffectResource extends EffectResource
 
 ## Trigger the effect. Override this to change the effect.
 func invoke_effect(target_cache: BatchTargetCache = BatchTargetCache.new()) -> void:
-	print("A TargetedEffectResource has been invoked.")
+	## Warn because bare TargetedEffectResource should not be used on actual cards, but may be used for testing
+	push_warning("A TargetedEffectResource has been invoked.")
