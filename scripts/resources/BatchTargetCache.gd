@@ -8,7 +8,7 @@ var caster_side: Globals.CasterSide
 
 #TODO: Create resource type for all entities to make this type tag more specific
 ## A cache of all targets selected by the player for the batch.
-var selected_cache: Array = []
+var selected_cache: Array[EntityResource] = []
 
 ## A list of cached indices corresponding to allies in selected_cache.
 var selected_allies: Array[int] = []
@@ -17,7 +17,7 @@ var selected_enemies: Array[int] = []
 
 #TODO: Create resource type for all entities to make this type tag more specific
 ## A cache of all targets selected by the player for the batch.
-var random_cache: Array = []
+var random_cache: Array[EntityResource] = []
 
 ## A list of cached indices corresponding to allies in selected_cache.
 var random_allies: Array[int] = []
