@@ -13,11 +13,11 @@ class_name CardResource extends Resource
 @export var effects: Array[EffectResource]
 
 ## Trigger the card's effects.
-func play_effects():
+func play_effects(caster):
 	var target_batch = BatchTargetCache.new()
 	for effect in effects:
 		if effect is TargetedEffectResource:
 			# Since EffectResource's invoke_effect function accepts no args, this is needed to tell Godot that the card is actually a TargetedEffectResource.
-			(effect as TargetedEffectResource).invoke_effect(target_batch)
+			(effect as TargetedEffectResource).invoke_targeted_effect(target_batch)
 		else:
 			effect.invoke_effect()

@@ -6,6 +6,10 @@ extends Node
 
 ## A readable list of target flags. Used to conveniently set the target mask and multi-target behaviors of a TargetBehaviorResource.
 enum TargetFlags {TARGET_SELF = 2**0, TARGET_ALLIES = 2**1, TARGET_ENEMIES = 2**2, TARGET_RANDOM = 2**3, TARGET_SHARED = 2**4}
+## A readable list of sides in a combat encounter. The player, by default, is on CasterSide.GOOD.
+## Entities on the same CasterSide as the caster are considered 'allies'; all others are considered 'enemies'.
+enum CasterSide {GOOD, BAD}
+## Players are always the lowestmost indices on their side, if we ever make multiple possible.
 
 # The following values are used for various purposes, such as determining when it is safe to replace a target count with 'all' on a card's text.
 ## The maximum number of entities that can exist in a scene.
