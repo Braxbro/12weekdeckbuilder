@@ -1,12 +1,14 @@
 class_name EntityResource extends Resource
 
-#Currently a placeholder class
-
-## Stores the entity's side for use in effects it casts.
+## Which side the entity belongs to.
 var side: Globals.CasterSide
 
-## Stores the entity's index in its side's array.
+## Position index within its side's list.
 var list_index: int
 
+## Placeholder stats — expand later (HP, mana, etc.)
+var stats := {}
 
-#TODO: Implement class according to needs of EffectResources.
+func _init(_side := Globals.CasterSide.GOOD, _stats := {}):
+	side = _side
+	stats = _stats
