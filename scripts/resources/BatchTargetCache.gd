@@ -22,10 +22,10 @@ var random_allies: Array[int] = []
 ## A list of cached indices corresponding to enemies in selected_cache.
 var random_enemies: Array[int] = []
 
-func _init(_caster: EntityResource):
-	self.caster = _caster
-	caster_index = _caster.list_index
-	caster_side = _caster.side
+func _init(caster: EntityResource):
+	self.caster = caster
+	caster_index = caster.list_index
+	caster_side = caster.side
 
 
 ## Returns existing targets from the cache, expanding the cache when more targets are requested.
