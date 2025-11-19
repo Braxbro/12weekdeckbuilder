@@ -49,7 +49,6 @@ func get_eligible_targets(caster: EntityResource, behavior: TargetBehaviorResour
 
 	for target in all_entities:
 		# Mandatory Game Rule Check (e.g., must be alive)
-		# NOTE: Assuming EntityResource has an 'is_alive' boolean property.
 		# if !target.is_alive: 
 		# 	continue
 
