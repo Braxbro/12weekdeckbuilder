@@ -11,13 +11,15 @@ config_version=5
 [application]
 
 config/name="12weekdeckbuilder"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+run/main_scene="uid://d124eipe1n344"
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://assets/sprites/icon.svg"
 
 [autoload]
 
 Globals="*res://scripts/autorun/Globals.gd"
 EventBus="*res://scripts/autorun/EventBus.gd"
+EntityTracker="*res://scripts/resources/EntityTracker.gd"
 
 [editor]
 
