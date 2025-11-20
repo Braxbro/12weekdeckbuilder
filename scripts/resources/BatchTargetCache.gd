@@ -31,7 +31,7 @@ func _init(caster: EntityResource):
 
 
 ## Returns existing targets from the cache, expanding the cache when more targets are requested.
-func fetch_targets(behavior: TargetBehaviorResource) -> Array:
+func fetch_targets(behavior: TargetBehaviorResource) -> Array[EntityResource]:
 	var to_return: Array = []
 	if behavior.random_target:
 		if behavior.shared_target:
