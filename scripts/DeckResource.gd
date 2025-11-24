@@ -1,5 +1,5 @@
 extends Node
-inherits LightLevel.gd
+extends LightLevel.gd
 # ---------------------------
 # CARD MANAGEMENT
 # ---------------------------
