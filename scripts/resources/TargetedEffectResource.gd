@@ -3,7 +3,11 @@ class_name TargetedEffectResource extends EffectResource
 
 @export var target_behavior: TargetBehaviorResource
 
+
+func invoke_effect() -> void:
+	push_error("TargetedEffectResources should be invoked using invoke_targeted_effect, not invoke_effect")
+
 ## Trigger the effect. Override this to change the effect.
-func invoke_effect(target_cache: BatchTargetCache = BatchTargetCache.new()) -> void:
+func invoke_targeted_effect(target_cache: BatchTargetCache) -> void:
 	## Warn because bare TargetedEffectResource should not be used on actual cards, but may be used for testing
 	push_warning("A TargetedEffectResource has been invoked.")

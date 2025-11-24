@@ -9,6 +9,4 @@ var side: Globals.CasterSide
 var list_index: int
 
 
-
-
 #TODO: Implement class according to needs of EffectResources.
