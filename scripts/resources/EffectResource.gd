@@ -8,8 +8,8 @@ class_name EffectResource extends Resource
 var color: String = "white":
 	set(new_value):
 		pass
-## The key used to describe the effect in tooltips.
-var locale_key: String = "EFFECT_DEBUG": 
+## The key used to describe the effect in tooltips. Should be unique.
+var locale_key: String = "DEBUG_EFFECT": 
 	set(new_value):
 		pass
 

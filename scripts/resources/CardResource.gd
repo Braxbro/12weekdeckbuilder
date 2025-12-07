@@ -7,6 +7,8 @@ class_name CardResource extends Resource
 @export var thumbnailArt: Texture2D
 ## Whether the card should use a full-art layout. Does nothing if thumbnailArt is unset.
 @export var fullArt: bool
+## Where the card should go when played.
+@export var destination: Globals.CardDestination
 
 @export_group("Card Effects")
 ## A list of effects that the card has.
